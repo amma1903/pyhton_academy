@@ -1,6 +1,10 @@
 from random import randint
-
-
+from gameplay import *
+import os
+from time import sleep
+from sys import *
+from names import *
+from aux import *
 class Gameplay:
 
     def __init__(self):
@@ -30,6 +34,6 @@ class Gameplay:
                 return 'L'
             elif player.play == 1:  
                 return 'W'
-    
     def show_play(self):
         return self.play
+
