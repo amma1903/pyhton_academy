@@ -46,12 +46,20 @@ def check_max_score_reached(pcScore,myScore, maxScore):
 
 def read_input():
     while True:
-        print("Enter choice \n 0 for rock \n 1 for paper \n 2 for scissor \n 3 for instructions \n 4 for exit ")
+        print("Enter choice \n Rock \n Paper \n Scissor \n Instructions \n Exit ")
 
         players_choice =  input()
 
-        if players_choice == '0' or players_choice == '1' or players_choice == '2' or players_choice == '3' or players_choice == '4':
-            return int(players_choice)
+        if players_choice == '0' or 'rock'.find(players_choice.lower()) == 0:
+            return 0
+        elif players_choice == '1' or 'paper'.find(players_choice.lower()) == 0:
+            return 1
+        elif players_choice == '2' or 'scissor'.find(players_choice.lower()) == 0:
+            return 1
+        elif players_choice == '3' or 'instructions'.find(players_choice.lower()) == 0:
+            return 1
+        elif players_choice == '4' or 'exit'.find(players_choice.lower()) == 0:
+            return 1
         else:
             print('please choose from one of the valid options')
 
